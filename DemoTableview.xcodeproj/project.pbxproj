@@ -13,6 +13,9 @@
 		842B9FD02549D548008D8418 /* SecondCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B9FCF2549D548008D8418 /* SecondCellTableViewCell.swift */; };
 		842B9FD52549DAEC008D8418 /* ThirstCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B9FD42549DAEC008D8418 /* ThirstCellTableViewCell.swift */; };
 		842B9FDA2549DB30008D8418 /* FoursCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B9FD92549DB30008D8418 /* FoursCellTableViewCell.swift */; };
+		842B9FEC254A02E1008D8418 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B9FEB254A02E1008D8418 /* Networking.swift */; };
+		842B9FF1254A0378008D8418 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B9FF0254A0378008D8418 /* ListModel.swift */; };
+		842B9FF6254A03B0008D8418 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B9FF5254A03B0008D8418 /* ErrorModel.swift */; };
 		848B79472548E965008D1655 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B79462548E965008D1655 /* AppDelegate.swift */; };
 		848B79492548E965008D1655 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B79482548E965008D1655 /* SceneDelegate.swift */; };
 		848B794E2548E965008D1655 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848B794C2548E965008D1655 /* Main.storyboard */; };
@@ -48,6 +51,9 @@
 		842B9FCF2549D548008D8418 /* SecondCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCellTableViewCell.swift; sourceTree = "<group>"; };
 		842B9FD42549DAEC008D8418 /* ThirstCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirstCellTableViewCell.swift; sourceTree = "<group>"; };
 		842B9FD92549DB30008D8418 /* FoursCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursCellTableViewCell.swift; sourceTree = "<group>"; };
+		842B9FEB254A02E1008D8418 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		842B9FF0254A0378008D8418 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
+		842B9FF5254A03B0008D8418 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 		848B79432548E965008D1655 /* DemoTableview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoTableview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848B79462548E965008D1655 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		848B79482548E965008D1655 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +96,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		842B9FDE254A015D008D8418 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				848B79812548EA19008D1655 /* Controller */,
+				848B79822548EA27008D1655 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		842B9FDF254A016E008D8418 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				842B9FF0254A0378008D8418 /* ListModel.swift */,
+				842B9FF5254A03B0008D8418 /* ErrorModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		842B9FE0254A0176008D8418 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		842B9FE1254A01BF008D8418 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				848B79542548E966008D1655 /* Info.plist */,
+				848B79482548E965008D1655 /* SceneDelegate.swift */,
+				848B79462548E965008D1655 /* AppDelegate.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		842B9FE2254A01DE008D8418 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				848B794F2548E966008D1655 /* Assets.xcassets */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		842B9FE3254A01EA008D8418 /* Board */ = {
+			isa = PBXGroup;
+			children = (
+				848B79512548E966008D1655 /* LaunchScreen.storyboard */,
+				848B794C2548E965008D1655 /* Main.storyboard */,
+			);
+			path = Board;
+			sourceTree = "<group>";
+		};
+		842B9FEA254A02A0008D8418 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				842B9FEB254A02E1008D8418 /* Networking.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		848B793A2548E965008D1655 = {
 			isa = PBXGroup;
 			children = (
@@ -113,14 +179,13 @@
 		848B79452548E965008D1655 /* DemoTableview */ = {
 			isa = PBXGroup;
 			children = (
-				848B79822548EA27008D1655 /* Cell */,
-				848B79812548EA19008D1655 /* Controller */,
-				848B79462548E965008D1655 /* AppDelegate.swift */,
-				848B79482548E965008D1655 /* SceneDelegate.swift */,
-				848B794C2548E965008D1655 /* Main.storyboard */,
-				848B794F2548E966008D1655 /* Assets.xcassets */,
-				848B79512548E966008D1655 /* LaunchScreen.storyboard */,
-				848B79542548E966008D1655 /* Info.plist */,
+				842B9FEA254A02A0008D8418 /* Service */,
+				842B9FDF254A016E008D8418 /* Model */,
+				842B9FDE254A015D008D8418 /* View */,
+				842B9FE0254A0176008D8418 /* ViewModel */,
+				842B9FE3254A01EA008D8418 /* Board */,
+				842B9FE2254A01DE008D8418 /* Image */,
+				842B9FE1254A01BF008D8418 /* Config */,
 			);
 			path = DemoTableview;
 			sourceTree = "<group>";
@@ -296,8 +361,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				842B9FC62549CB73008D8418 /* VC2ViewController.swift in Sources */,
+				842B9FEC254A02E1008D8418 /* Networking.swift in Sources */,
 				848B79472548E965008D1655 /* AppDelegate.swift in Sources */,
+				842B9FF1254A0378008D8418 /* ListModel.swift in Sources */,
 				842B9FD52549DAEC008D8418 /* ThirstCellTableViewCell.swift in Sources */,
+				842B9FF6254A03B0008D8418 /* ErrorModel.swift in Sources */,
 				848B797D2548E99D008D1655 /* ListRowViewController.swift in Sources */,
 				842B9FCB2549CB7E008D8418 /* VC3ViewController.swift in Sources */,
 				848B79842548EA3F008D1655 /* FirstCellTableViewCell.swift in Sources */,
@@ -482,7 +550,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M9RXFTNQ3L;
-				INFOPLIST_FILE = DemoTableview/Info.plist;
+				INFOPLIST_FILE = DemoTableview/Config/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -501,7 +569,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M9RXFTNQ3L;
-				INFOPLIST_FILE = DemoTableview/Info.plist;
+				INFOPLIST_FILE = DemoTableview/Config/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
