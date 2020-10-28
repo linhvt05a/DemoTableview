@@ -47,9 +47,23 @@ extension ListRowViewController : UITableViewDelegate {
         let index = indexPath.row
         switch index {
         case 0:
-            <#code#>
+            let vc1 = storyboard?.instantiateViewController(identifier: "VC1ViewController") as! VC1ViewController
+            vc1.items = arrayName
+            navigationController?.pushViewController(vc1, animated: true)
+            
+        case 1:
+            let vc1 = storyboard?.instantiateViewController(identifier: "VC2ViewController") as! VC2ViewController
+           
+            self.navigationController?.pushViewController(vc1, animated: true)
+            
+        case 2:
+            let vc1 = storyboard?.instantiateViewController(identifier: "VC3ViewController") as! VC3ViewController
+           
+            self.navigationController?.pushViewController(vc1, animated: true)
         default:
-            <#code#>
+            break
         }
+       
+       
     }
 }

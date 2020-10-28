@@ -9,21 +9,42 @@ import UIKit
 
 class VC2ViewController: UIViewController {
 
+    @IBOutlet weak var listDetail: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension VC2ViewController : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let index = indexPath.row
+        switch index {
+        case 0:
+            return 100
+        case 1:
+            return 150
+            
+        case 2:
+            return 180
+        default:
+            break
+        }
+        return 0
     }
-    */
+}
 
+extension VC2ViewController : UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)as! ThirstCellTableViewCell
+        cell.lblTitle.text = "dasadsdas"
+        
+        return cell
+    }
+    
+    
 }
